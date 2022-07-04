@@ -110,4 +110,4 @@ app.post("/split-payments/compute", async (req, res) => {
   }
 });
 
-app.listen(port, () => console.log("Server loading....."));
+app.listen(process.env.PORT || 5000);
