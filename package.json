@@ -2,9 +2,11 @@
   "name": "lannisterpay",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "test": "node index.js",
+    "worker": "node index.js",
     "start": "node index.js"
   },
   "keywords": [],

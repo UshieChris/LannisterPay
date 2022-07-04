@@ -1,9 +1,12 @@
 import express from 'express';
 
-const app = express();
-const PORT = 5000;
 
+
+const app = express();
+
+const port = 5000;
 app.use(express.json());
+app.set('port', (process.env.PORT || 5000));
 
 app.get("/", (req, res) => {
   res.send("Hello world");
@@ -110,4 +113,4 @@ app.post("/split-payments/compute", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log(`Server:http://localhost:${PORT}`));
+app.listen(port, () => console.log(`Server:http://localhost:${port}`));
